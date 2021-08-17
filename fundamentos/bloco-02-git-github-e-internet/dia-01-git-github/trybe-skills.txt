@@ -1,5 +1,5 @@
 O que vou aprender na Trybe: 
 - Unix 
 - Bash
-- GitHTML
-CSS
+trybe-skills-updates
+- Git- Python
