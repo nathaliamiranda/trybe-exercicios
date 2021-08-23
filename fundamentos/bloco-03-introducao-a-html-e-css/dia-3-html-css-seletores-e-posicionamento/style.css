@@ -26,6 +26,6 @@
   
   /* insira na classe abaixo uma borda com valor '5px solid black' para aplicá-la ao item D */
   .border {
-    width: 5px; solid-black; 
-    height: 5px;
+    width: 5px solid-black;
+    
   }
