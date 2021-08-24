@@ -1,0 +1,31 @@
+.caixa {
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: top;
+  }
+  
+  .width-and-height {
+    height: 50px;
+    width: 50px;
+  }
+  
+  
+  .padding {
+      width: 20px;
+      height: 20px;
+  
+  }
+  
+
+  .margin {
+  width: 30px;
+  height: 30px;
+  }
+  
+  
+  .border {
+    width: 5px solid-black;
+    
+  }

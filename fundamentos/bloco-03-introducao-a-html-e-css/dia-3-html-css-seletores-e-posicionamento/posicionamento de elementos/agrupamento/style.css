@@ -1,0 +1,18 @@
+h1, p, ul, ol {
+    text-align: center;
+  }
+  
+  ul:hover, ol:hover {
+    background-color: pink;
+    color: #fff;
+  }
+  
+  li:active {
+    font-family: sans-serif, Helvetica;
+    font-size: 20px;
+  }
+  
+  
+  li {
+    list-style: none;
+  }
