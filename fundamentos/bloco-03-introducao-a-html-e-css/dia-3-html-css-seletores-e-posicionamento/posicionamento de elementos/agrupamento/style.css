@@ -1,9 +1,10 @@
-h1, p {
+h1, p, ul, ol {
     text-align: center;
   }
   
   ul:hover, ol:hover {
-    background-color: red;
+    background-color: pink;
+    color: #fff;
   }
   
   li:active {
@@ -11,7 +12,7 @@ h1, p {
     font-size: 20px;
   }
   
-  /* 5. No 'style.css', adicione a propriedade 'list-style: none' para ambas as listas. */
+  
   li {
     list-style: none;
   }
