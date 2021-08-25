@@ -6,8 +6,11 @@ let soma = angulo1 + angulo2 + angulo3;
 if (soma===180){
 console.log (true);
 }
+else if (soma<180) {
+    console.log (false);
+}
 else {
-console.log (false);
+    console.log ('Erro: ângulo inválido');
 }
 
 
