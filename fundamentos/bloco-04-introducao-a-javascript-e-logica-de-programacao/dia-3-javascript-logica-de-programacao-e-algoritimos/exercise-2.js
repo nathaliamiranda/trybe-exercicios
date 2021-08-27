@@ -1,9 +1,9 @@
-let n = 7;
+let size = 7;
 let asteristico = "*";
-let entrada = ""
-for (let index =0; index < n; index+=1) {
-    entrada = entrada + asteristico;
+let entradaDoAsteristico = "";
+for (let index =0; index < size; index+=1) {
+    entradaDoAsteristico = entradaDoAsteristico + asteristico;
 };
-for (let index = 0; index < n; index+=1) {
-    console.log (entrada);
+for (let index = 0; index < size; index+=1) {
+    console.log (entradaDoAsteristico);
 }
