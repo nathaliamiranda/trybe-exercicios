@@ -1,4 +1,4 @@
-let size = 7;
+let size = 5;
 let asteristico = "*";
 let entradaDoAsteristico = "";
 
