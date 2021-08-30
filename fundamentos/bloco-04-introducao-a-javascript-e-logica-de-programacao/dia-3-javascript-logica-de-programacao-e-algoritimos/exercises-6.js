@@ -1,7 +1,7 @@
-let divisor = 1;
+let divisor = 0;
 let numeroTestado = 31;
 
-for (let numero = 2; numero <= numeroTestado; numero += 1) {
+for (let numero = 1; numero <= numeroTestado; numero += 1) {
   if (numeroTestado % numero === 0) divisor += 1;
 }
 
