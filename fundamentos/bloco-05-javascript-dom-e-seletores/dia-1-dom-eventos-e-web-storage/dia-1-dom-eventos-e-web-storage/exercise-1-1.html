@@ -50,35 +50,38 @@
          mudaTextodoParagrafo ();
 
          function mudaCorDoQuadrado () {
-         let modificaCorDoQuadrado = document.getElementsByClassName("main-content")[0];
-         modificaCorDoQuadrado.style.background = "rgb(76,164,109)";
+          let modificaCorDoQuadrado = document.getElementsByClassName("main-content")[0];
+          modificaCorDoQuadrado.style.background = "rgb(76,164,109)";
        
     }     
          mudaCorDoQuadrado ();
 
          function mudaCorDoQuadradoVermelho () {
-         let modificaCorDoQuadrado = document.getElementsByClassName("center-content")[0];
-         modificaCorDoQuadrado.style.background = "white";
+          let modificaCorDoQuadrado = document.getElementsByClassName("center-content")[0];
+          modificaCorDoQuadrado.style.background = "white";
     }     
          mudaCorDoQuadradoVermelho ();
 
          function consertaTexto () {
-             let consertaTextoTrybe = document.getElementsByTagName("h1")[0];
-          consertaTextoTrybe.innerHTML = "Exercício 5.1 - JavaScript"; 
-         
+            let consertaTextoTrybe = document.getElementsByTagName("h1")[0];
+            consertaTextoTrybe.innerHTML = "Exercício 5.1 - JavaScript"; 
+     
     }
         consertaTexto ();
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
-        
-        
-        4. Crie uma função que corrija o texto da tag <h1>.
-        5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-        6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
-    </script>
+
+        function textoEmMaiusculo () {
+          let textoParagrafoMaiusculo = document.getElementsByTagName("p")[0];
+          textoParagrafoMaiusculo.innerHTML = textoParagrafoMaiusculo.innerHTML.toUpperCase();
+    }
+          textoEmMaiusculo ();
+
+          function exibeTodoConteudoP () {
+            let todoConteudoP = document.getElementsByTagName("p");
+            for (let i = 0; i < todoConteudoP.length; i +=1) {
+            console.log(todoConteudoP[i].innerHTML);
+          }
+          }
+          exibeTodoConteudoP ();
+   </script>
   </body>
 </html>
