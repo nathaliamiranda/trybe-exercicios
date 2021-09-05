@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+//Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+ const chamaBody = document.querySelector('body');
+ let primeiroFilhoDeBody = document.createElement('h1');
+ primeiroFilhoDeBody.innerText = 'Exercício 5.2 - JavaScript DOM';
+ chamaBody.appendChild(primeiroFilhoDeBody);
+
+// Adicione a tag main com a classe main-content como filho da tag body ;
+chamaBody;
+let tagMain = document.createElement('main');
+tagMain.className = 'main-content';
+chamaBody.appendChild(tagMain);
+
+// Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+const chamaTagMain = document.getElementsByTagName('main')[0];
+let primeiroFilhoDaTagMain = document.createElement('section');
+primeiroFilhoDaTagMain.className = 'center-content';
+chamaTagMain.appendChild(primeiroFilhoDaTagMain);
+
+// Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+const chamaTagSection = document.querySelector('section');
+let filhoDaTagSection = document.createElement('p');
+filhoDaTagSection.innerText = 'Trabalhando com elementos';
+chamaTagSection.appendChild(filhoDaTagSection);
+// Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+chamaTagMain;
+let segundoFilhoDaTagMain = document.createElement('section');
+segundoFilhoDaTagMain.className = 'left-content';
+chamaTagMain.appendChild(segundoFilhoDaTagMain);
+// Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+chamaTagMain;
+let terceiroFilhoDaTagMain = document.createElement('section');
+terceiroFilhoDaTagMain.className = 'right-content';
+chamaTagMain.appendChild(terceiroFilhoDaTagMain);
+// Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+const chamaSegundoFilhoDaTagMain = document.getElementsByClassName('left-content')[0];
+let filhoDoSegundoFilhoDaMain = document.createElement('img');
+filhoDoSegundoFilhoDaMain.src = 'https://picsum.photos/200';
+filhoDoSegundoFilhoDaMain.className = 'small-image';
+chamaSegundoFilhoDaTagMain.appendChild(filhoDoSegundoFilhoDaMain);
+
+// Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+
+const chamaTerceiroFilhoDaMain = document.getElementsByClassName('right-content')[0];
+let filhoDoTerceiroFilhoDaMain = document.createElement('ul');
+chamaTerceiroFilhoDaMain.appendChild(filhoDoTerceiroFilhoDaMain);
+let listaDeArray = [ 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+for ( let valores of listaDeArray) {
+    let numeroDaLista = document.createElement('li');
+    numeroDaLista.innerHTML = valores;
+    chamaTerceiroFilhoDaMain.appendChild(numeroDaLista);
+}  
+
+// Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+chamaTagMain;
+let quartoFilhoDaMain = document.createElement('h3');
+chamaTagMain.appendChild(quartoFilhoDaMain);
+let quintoFilhoDaMain = document.createElement('h3');
+chamaTagMain.appendChild(quintoFilhoDaMain);
+let sextoFilhoDaMain = document.createElement('h3');
+chamaTagMain.appendChild(sextoFilhoDaMain);
+    </script>
+  </body>
+</html>
