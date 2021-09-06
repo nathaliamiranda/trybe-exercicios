@@ -60,8 +60,10 @@
 //Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
  const chamaBody = document.querySelector('body');
  let primeiroFilhoDeBody = document.createElement('h1');
+ primeiroFilhoDeBody.className = 'title';
  primeiroFilhoDeBody.innerText = 'Exercício 5.2 - JavaScript DOM';
  chamaBody.appendChild(primeiroFilhoDeBody);
+ 
 
 // Adicione a tag main com a classe main-content como filho da tag body ;
 chamaBody;
@@ -112,11 +114,27 @@ for ( let valores of listaDeArray) {
 // Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
 chamaTagMain;
 let quartoFilhoDaMain = document.createElement('h3');
+quartoFilhoDaMain.className = 'description';
 chamaTagMain.appendChild(quartoFilhoDaMain);
 let quintoFilhoDaMain = document.createElement('h3');
+quintoFilhoDaMain.className = 'description';
 chamaTagMain.appendChild(quintoFilhoDaMain);
 let sextoFilhoDaMain = document.createElement('h3');
+sextoFilhoDaMain.className = 'description';
 chamaTagMain.appendChild(sextoFilhoDaMain);
-    </script>
+  
+// Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+const segundoFilhoDaMain = document.getElementsByClassName ('left-content')[0];
+chamaTagMain.removeChild(segundoFilhoDaMain);
+
+// Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o  margin-right: auto da section ;
+const terceiroFilhoDaMain = document.getElementsByClassName('right-content')[0];
+terceiroFilhoDaMain.style.marginRight ='auto';
+// Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+const primeiroFilhoDaMain = document.getElementsByClassName('center-content')[0];
+primeiroFilhoDaMain.parentNode.style.backgroundColor = 'green';
+// Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+ </script>
   </body>
 </html>
