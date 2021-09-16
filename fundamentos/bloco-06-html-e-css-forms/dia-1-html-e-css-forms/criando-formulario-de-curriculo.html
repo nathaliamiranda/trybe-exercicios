@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Curriculo</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <main>
+  <form action="#" method="GET"> 
+    <fieldset>
+      <legend>Preencha os dados solicitados</legend>
+      <label for='input'>Nome:</label>
+      <input type=’text’ placeholder='Nome' required maxlength=40 id=’input’>
+      <br><br>
+      <label for='email'>Email:</label>
+      <input type='email' placeholder='Email' required maxlength=50 id='email'>
+      <br><br>
+      <label for='cpf'>CPF:</label>
+      <input type='text' placeholder='CPF' required maxlength=11 id='cpf'>
+      <br><br>
+      <label for='endereço'>Endereço:</label>
+      <input type='text' placeholder='Endereço' required maxlength=200 id='endereço'>
+      <br><br>
+      <label for='cidade'>Cidade:</label>
+      <input type='text' placeholder='Cidade' required maxlength=28 id='cidade'>
+      <br><br>
+      <label for='estado'>Estado:</label>
+      <select name='estado' id='estado' required>
+  </select>
+      <br><br>
+      <label for='residencia'>Casa:</label>
+      <input type='radio' name='reside' id='residencia' required value='casa'>
+      <br>
+      <label for='residencia-2'>Apartamento:</label>
+      <input type='radio' name='reside' id='residencia-2'required value='apartamento'>
+    
+    </fieldset>
+    <br>
+    <fieldset> 
+      <legend>Ultimo Cargo</legend>
+      <textarea name='emprego' id='ultimo-cargo' cols='30' rows='10' required maxlength='1000' placeholder='Resumo do currículo'></textarea>
+      <br><br>
+      <label for="cargo">Cargo:</label>
+      <input type='text' name='cargo' id='cargo' placeholder='Cargo'required maxlength='40'></input>
+      <br><br>
+      <label for="descricao">Descrição:</label>
+      <input type='text' name='descricao' placeholder='Descrição do cargo' maxlength='500' id='descricao' requirid>
+      <br><br>
+      <label for='data'>Data:</label>
+      <input type='text' name='data' placeholder='00/00/0000'required id='data'>
+      <br><br>
+    </fieldset>
+    <button type="reset" name='reset' id='apagar'>Limpar</button>
+    <button type="submit" name='botão' id='enviar'>Enviar</button>
+  </form>
+  <script src='script.js'></script>
+  </main>
+ </body>
+ </html>
