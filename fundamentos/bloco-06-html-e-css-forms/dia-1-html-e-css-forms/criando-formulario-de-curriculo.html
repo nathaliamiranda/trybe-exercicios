@@ -6,8 +6,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
   crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-
 
   <meta charset="utf-8">
 </head>
@@ -16,49 +14,49 @@
   <main>
   <div class="container">
   <h1 class="text-success">Formulário</h1>
-  <form action="#" method="GET" class='js-form'> 
+  <form action="#" class='js-form'> 
     <div class="container">
     <fieldset>
       <legend>Preencha os dados solicitados</legend>
-     <div class="container"></div>
-      <label for='input'>Nome:</label>
-      <input type=’text’ placeholder='Nome' required maxlength=40 data-validation-field='name' id=’name’>
+     <div class="container form-group">
+      <label for='name'>Nome:</label>
+      <input type=’text’ placeholder='Nome' class='form__input form-control' data-validation-field='name' name='name' id=’name’>
     </div>
       <br><br>
-      <div class="container">
+      <div class="container form-group">
       <label for='email'>Email:</label>
-      <input type='email' placeholder='Email' data-validation-field='email' required maxlength=50 id='email'>
+      <input type='email' placeholder='Email' data-validation-field='email' autocomplete='off' maxlength='50' id='email'>
     </div>
       <br><br>
-      <div class="container">
+      <div class="container form-group">
       <label for='cpf'>CPF:</label>
-      <input type='text' placeholder='CPF' data-validation-field='cpf' required maxlength=11 id='cpf'>
+      <input type='text' placeholder='CPF' data-validation-field='cpf' autocomplete='off' data-validation-maxlength='11' id='cpf'>
     </div>
       <br><br>
       <div class="container">
-      <label for='endereço'>Endereço:</label>
-      <input type='text' placeholder='Endereço' data-validation-field='endereço' required maxlength=200 id='endereço'>
+      <label for='endereco'>Endereço:</label>
+      <input type='text' placeholder='Endereço' data-validation-field='endereco' maxlength='200' id='endereco'>
     </div>
       <br><br>
     <div class="container">
       <label for='cidade'>Cidade:</label>
-      <input type='text' placeholder='Cidade' data-validation-field='cidade' required maxlength=28 id='cidade'>
+      <input type='text' placeholder='Cidade' data-validation-field='cidade' maxlength='28' id='cidade'>
     </div>
       <br><br>
       <div class="container">
       <label for='estado'>Estado:</label>
-      <select name='estado' id='estado' required>
+      <select name='estado' id='estado'>
   </select>
      </div>
       <br><br>
       <div class="container">
       <label for='residencia'>Casa:</label>
-      <input type='radio' name='reside' id='residencia' data-validation-field='radio' required value='casa'>
+      <input type='radio' name='reside' id='residencia' data-validation-field='radio' value='casa'>
     </div>
       <br>
     <div class="container">
       <label for='residencia-2'>Apartamento:</label>
-      <input type='radio' name='reside' id='residencia-2' data-validation-field='radio' required value='apartamento'>
+      <input type='radio' name='reside' id='residencia-2' data-validation-field='radio' value='apartamento'>
     </div>
     
     </fieldset>
@@ -67,27 +65,27 @@
     <div class="container">
     <fieldset> 
       <legend>Ultimo Cargo</legend>
-      <textarea name='emprego' id='ultimo-cargo' cols='30' rows='10' required maxlength='1000' placeholder='Resumo do currículo'></textarea>
+      <textarea name='emprego' id='ultimo-cargo' cols='30' rows='10'  maxlength='1000' placeholder='Resumo do currículo'></textarea>
       <br><br>
       <label for="cargo">Cargo:</label>
-      <input type='text' name='cargo' id='cargo' placeholder='Cargo' data-validation-field='cargo' required maxlength='40'></input>
+      <input type='text' name='cargo' id='cargo' placeholder='Cargo' data-validation-field='cargo'  maxlength='40'></input>
       <br><br>
       <label for='descricao'>Descrição:</label>
-      <input type='text' name='descricao' placeholder='Descrição do cargo' maxlength='500' data-validation-field='descricao' id='descricao' requirid>
+      <input type='text' name='descricao' placeholder='Descrição do cargo' maxlength='500' data-validation-field='descricao' id='descricao'>
       <br><br>
       <label for='data'>Data:</label>
-      <input type='text' name='data' placeholder='00/00/0000'required autocomplete='none' id='datepicker'>
+      <input type='text' name='data' placeholder='00/00/0000' autocomplete='none' id='datepicker'>
   
       <br><br>
     </div>
     </fieldset>
     <button type="reset" name='reset' id='apagar' class="btn btn-success">Limpar</button>
-    <button type="submit" name='botão' id='enviar' class="btn btn-secondary">Enviar</button>
+    <button name='botão' id='enviar' class="btn btn-secondary">Enviar</button>
   </form>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-  <script src="./path/to/just-validate.min.js"></script>
+  <script src="./node_modules/just-validate/dist/js/just-validate.min.js"></script>
   <script src='script.js'></script>
   </main>
  </body>
