@@ -1,0 +1,40 @@
+body {
+font-size: 1.6em;
+margin: 0 3%;
+}
+h1 {
+font-size: 1em;
+margin: 1 0 0 1;
+}
+h2 {
+margin: 1 0 0 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 2;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+      background-color: rgba(233, 125, 200, 0.2);
+      margin: 20px 7%;
+    }
+    figure {
+      float: left;
+      width: 45%;
+      margin-right: 4.5%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+body {
+  background-color: blueviolet;
+  font-size: 12 em;
+  margin-right: 10px 4%;
+  max-width: 1200px;
+}
+}
