@@ -64,7 +64,7 @@ const lesson1 = {
   
   console.log(valorChaveIndice(lesson3, 0));
   
-  // Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+  // 8- Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
   const verificaPar = (objeto, key, value) => {
     let arrayRetorno = Object.entries(objeto);
     for (let index = 0; index < arrayRetorno.length; index += 1){
