@@ -65,10 +65,13 @@ function techList(techs, nome) {
 function hydrate(coposDeAgua) {
   // Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
   // Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber.
+  // forma de encontrar numeros em uma string - pesquisa: YoutubeJavaScript Problem: Extracting Numbers from a String.
   let r = /\d+/g;
   let retorno = 0;
-  let quantidadeDeAlcool = coposDeAgua.match(r);
+  // o match pega a string de numeros da saída do r e transforma em um array
+  let quantidadeDeAlcool = coposDeAgua.match(r); 
   for (let i of quantidadeDeAlcool) {
+    // o parseint tranforma em numero inteiro esse 10 é convencional pra dizer que é inteiro decimal
     retorno = retorno + parseInt(i, 10);
   }
   if (retorno === 1) {
@@ -77,3 +80,4 @@ function hydrate(coposDeAgua) {
   return retorno + " copos de água";
 }
 module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate}
+
