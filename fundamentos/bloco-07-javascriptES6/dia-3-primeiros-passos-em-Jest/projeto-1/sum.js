@@ -61,4 +61,19 @@ function techList(techs, nome) {
   return tecnologias;
 
 }
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList }
+
+function hydrate(coposDeAgua) {
+  // Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+  // Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber.
+  let r = /\d+/g;
+  let retorno = 0;
+  let quantidadeDeAlcool = coposDeAgua.match(r);
+  for (let i of quantidadeDeAlcool) {
+    retorno = retorno + parseInt(i, 10);
+  }
+  if (retorno === 1) {
+    return retorno + " copo de água";
+  }
+  return retorno + " copos de água";
+}
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate}
