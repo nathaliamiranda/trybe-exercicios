@@ -4,12 +4,8 @@ const palio = ['Palio', 'Fiat', 2019];
 const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
 const chiron = ['Chiron', 'Bugatti', 2016];
 
-const toObject = (cars) => {
-  return palio.forEach((car) => car[{
-    carro,
-     marca, 
-     ano,
-   }]);
- }
+const toObject = ([name, brand, year]) => ({ name, brand, year });
  
  console.log(toObject(palio));
+ console.log(toObject(shelbyCobra));
+ console.log(toObject(chiron));
