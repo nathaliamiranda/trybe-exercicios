@@ -25,8 +25,7 @@ const sendMarsTemperature = (onSuccess, printErrorMessage) => {
     if (didOperationSucceed) {
       onSuccess(currentTemperature);
     } else {
-      const errorMessage = 'Error getting temperature: Robot is busy';
-      printErrorMessage(errorMessage);
+      printErrorMessage('Robot is busy');
     }
   }, messageDelay());
 
