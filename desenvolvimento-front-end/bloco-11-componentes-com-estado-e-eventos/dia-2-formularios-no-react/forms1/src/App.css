@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+input, textarea, select {
+  flex-flow: row wrap;
+  flex-direction: column;
+  text-align: center;
+
+}
