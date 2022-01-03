@@ -1,7 +1,29 @@
 const Redux = require('redux');
 
-const reducer = (state = { login: false, email: "" }) => {
-    return state;
-};
+const fazerLogin = (email) => ({
+    type: "LOGIN",
+    email});
 
-const store =  Redux.createStore(reducer);
+const ESTADO_INICIAL = {
+    login: false,
+    email: "",
+  };
+  
+  const reducer = (state = ESTADO_INICIAL, action) => {
+      switch (action.type) {
+          case "LOGIN":
+              return {
+                  ...state, 
+                  login: !state.login,
+                  email: action.email,
+              };
+      default:
+    return state;
+    }
+  };
+  
+  const store = Redux.createStore(reducer);
+
+  store.dispatch(fazerLogin("nathalia@email.com"));
+  
+  console.log(store.getState());
