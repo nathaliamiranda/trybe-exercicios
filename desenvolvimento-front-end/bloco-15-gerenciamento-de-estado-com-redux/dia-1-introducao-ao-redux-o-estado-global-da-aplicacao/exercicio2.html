@@ -38,6 +38,12 @@
 
       const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
+            case 'CHANGE_FIRST_NAME':
+                return {
+                    ...state,
+                    nome: action.nome,
+                    sobrenome: action.sobrenome,
+                };
           default:
             return state;
         }
@@ -45,13 +51,43 @@
 
       const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
         switch (action.type) {
+          case 'CHANGE_SECONDE_NAME':
+            return {
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome,
+            };
           default:
             return state;
         }
       };
 
       const rootReducer = Redux.combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
+
       const store = Redux.createStore(rootReducer);
+
+      store.subscribe( () => {
+        const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
+        document.getElementById('nome-1').innerHTML = meuPrimeiroReducer.nome;
+        document.getElementById('sobrenome-1').innerHTML = meuPrimeiroReducer.sobrenome;
+
+        document.getElementById('nome-2').innerHTML = meuSegundoReducer.nome;
+        document.getElementById('sobrenome-2').innerHTML = meuSegundoReducer.sobrenome;
+      })
+
+      window.onload = () => {
+        setTimeout(() => {
+        store.dispatch({
+          type: 'CHANGE_FIRST_NAME',
+          nome: 'Bruna',
+          sobrenome: 'Santana Oliveira',
+        });
+        store.dispatch({
+          type: 'CHANGE_SECONDE_NAME',
+          nome: 'Rodrigo',
+          sobrenome: 'Santos da Silva',
+        }) }, 3000);
+      };
     </script>
   </body>
 </html>
