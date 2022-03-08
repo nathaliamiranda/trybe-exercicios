@@ -1,9 +1,8 @@
-const PESO_80KG = 80; 
-const ALTURA_1M_78CM = 178;
+const readline = require('readline-sync');
 
 function calculaImc () {
-  const peso = PESO_80KG;
-  const altura = ALTURA_1M_78CM;
+  const peso = readline.questionInt('Qual o seu peso? (em kg)');
+  const altura = readline.questionInt('Qual a sua altura? (em cm)');
 
   console.log(`Peso: ${peso}, Altura: ${altura}`);
 
