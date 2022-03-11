@@ -28,9 +28,12 @@ doMath(1, 2, 1)
 function randomNumber() {
   return Math.floor(Math.random() * 100 + 1);
 }
-function callDoMath() {
+async function callDoMath() {
   const randomNumbers = Array.from({ length: 3 }).map(randomNumber);
-  doMath(...randomNumbers)
-    .then(result => console.log(result))
-    .catch(err => console.error(err.message))
+  try {
+    const result = await doMath(...randomNumbers);
+      console.log(result);
+  } catch (err) {
+      console.error(err);
   }
+}
