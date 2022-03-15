@@ -51,3 +51,19 @@ describe('Executa a função numNaturalFn', () => {
     });
   });
 });
+
+describe('quando o parâmetro passado não é um número', () => {
+  describe('a resposta', () => {
+    it('é uma "string"', () => {
+      const resposta = numNaturalFn('dfsd');
+
+      expect(resposta).to.be.a('string');
+    });
+
+    it('é igual a "o parâmetro deve ser um número"', () => {
+      const resposta = numNaturalFn('sdsf');
+
+      expect(resposta).to.be.equals('o parâmetro deve ser um número');
+    });
+  });
+});
