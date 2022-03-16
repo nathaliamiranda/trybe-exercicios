@@ -12,6 +12,15 @@ app.post('/hello', (req, res) => {
     res.status(200).json({ "message": `Hello, ${name}!` })
   })
 
+app.post('/greeting', (req, res) => {
+    const { name, age } = req.body;
+    
+    if(parseInt(age, 10) <= 17) {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+    res.status(200).json({ message: `Hello, ${name}!` })
+})
+
 app.use( function (err, _req, res, _next) {
     res.status(500).send(`Something bad happened! Message: ${err.message}`);
 });
