@@ -19,6 +19,9 @@ app.get('/ping', (req, res) => {
 
 app.get('/cep/:cep', Cep.findAddressByCep);
 
+app.post('/cep', Cep.create);
+
+
 app.use(errorMiddleware);
 
 
