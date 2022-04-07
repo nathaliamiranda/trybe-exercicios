@@ -6,7 +6,7 @@ const getAll = async (_req, res) => {
 
     return res.status(200).json(books);
   } catch (err) {
-    console.log(e.message);
+    console.log(err);
     return res.status(500).json({ message: "algo deu errado" });
   }
 };
@@ -19,7 +19,7 @@ const getById = async (req, res) => {
 
     return res.status(200).json(book);
   } catch (err) {
-    console.log(e.message);
+    console.log(err);
     return res.status(500).json({ message: "Algo deu errado" });
   }
 };
@@ -36,7 +36,7 @@ const createNewBook = async (req, res) => {
 
     return res.status(201).json(book);
   } catch (err) {
-    console.log(e.message);
+    console.log(err);
     return res.status(500).json({ message: "Algo deu errado" });
   }
 };
