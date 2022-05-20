@@ -54,12 +54,36 @@ export default class Student {
 
     this._worksGrades = value;
   }
+
+  sumGrades(): number {
+    return [...this.examsGrades, ...this.worksGrades]
+      .reduce((previousNote, note) => {
+        note += previousNote;
+
+        return note;
+      }, 0);
+  }
+
+  sumAverageGrade(): number {
+    const sumGrades = this.sumGrades();
+    const divider = this.examsGrades.length + this.worksGrades.length;
+
+    return Math.round(sumGrades / divider);
+  }
 }
+
 
 const personOne = new Student('202001011', 'Maria da Silva');
 
 const personTwo = new Student('202001012', 'João da Silva');
 
+personOne.examsGrades = [10, 7, 9, 7];
+personOne.worksGrades = [8, 8];
+
 console.log(personOne);
 
 console.log(personTwo);
+
+console.log('Soma de todas as notas: ', personOne.sumGrades());
+
+console.log('Média de todas as notas: ', personOne.sumAverageGrade());
