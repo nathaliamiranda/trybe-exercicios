@@ -1,5 +1,4 @@
-
-class Client {
+export default class Client {
     private _name = String();
   
     constructor(name: string) {
