@@ -101,6 +101,19 @@ export default class Client {
   
       this._discount = value;
     }
+
+    calculateTotal(): number {
+      return this.items.
+        reduce((previousValue, item) => {
+          const total = previousValue += item.price;
+  
+          return total;
+        }, 0)
+    }
+  
+    calculateTotalWithDiscount(): number {
+      return this.calculateTotal() * (1 - this.discount);
+    }
   }
 
 const client = new Client('Lucas');
@@ -110,3 +123,6 @@ const juice = new OrderItem('Suco de Laranja', 9.00);
 const dessert = new OrderItem('Brownie', 6.50);
 
 const order = new Order(client, [sandwiche, juice, dessert], 'dinheiro', 0.50);
+
+console.log('Valor normal: ', order.calculateTotal());
+console.log('Valor com desconto: ', order.calculateTotalWithDiscount());
