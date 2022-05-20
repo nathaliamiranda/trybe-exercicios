@@ -1,7 +1,6 @@
 import Person from './Person';
 import Student from './Student';
-import IEmployee from './interfaces/IEmployee';
-
+import Subject from './Subject';
 
 const laura = new Person('Laura Oliveira', new Date('1980/01/25'));
 const theo = new Person('Theo Andrade', new Date('2005/10/02'));
@@ -29,3 +28,11 @@ console.log(maria);
 console.log(marcio);
 console.log(joyce);
 console.log(bruna);
+
+const philosophy = new Subject('Filosofia');
+const story = new Subject('História');
+const math = new Subject('Matemática');
+
+console.log(philosophy);
+console.log(story);
+console.log(math);
