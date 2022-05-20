@@ -1,5 +1,7 @@
 import Person from './Person';
 import Student from './Student';
+import IEmployee from './interfaces/IEmployee';
+
 
 const laura = new Person('Laura Oliveira', new Date('1980/01/25'));
 const theo = new Person('Theo Andrade', new Date('2005/10/02'));
