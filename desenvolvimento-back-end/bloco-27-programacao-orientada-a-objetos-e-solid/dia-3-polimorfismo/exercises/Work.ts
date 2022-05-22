@@ -7,7 +7,7 @@ export default class Work extends Evaluation {
   }
 
   set score(value: number) {
-    if (value > 11) throw new Error('A pontução deve ser menor que 11 pontos.');
+    if (value > 50) throw new Error('A pontução deve ser menor que 50 pontos.');
 
     super.score = value;
   }

@@ -7,8 +7,8 @@ export default class Exam extends Evaluation {
   }
 
   set score(value: number) {
-    if (value > 11) {
-      throw new Error('A pontução deve ser menor que 11 pontos.');
+    if (value > 25) {
+      throw new Error('A pontução deve ser menor que 25 pontos.');
     }
 
     super.score = value;
